@@ -1,0 +1,72 @@
+behaviors {
+    shift_2_lbrace: shift_2_lbrace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_3_lcurlybrace: shift_3_lcurlybrace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N3>, <&kp LS(LEFT_BRACKET)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_4_lparen: shift_4_lparen {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N4>, <&kp LS(N9)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_5_amper: shift_5_amper {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N5>, <&kp LS(N7)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_7_rparen: shift_7_rparen {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N7>, <&kp LS(N0)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_8_rcurlybrace: shift_8_rcurlybrace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N8>, <&kp LS(RIGHT_BRACKET)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_9_rbrace: shift_9_rbrace {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N9>, <&kp RIGHT_BRACKET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_0_asterix: shift_0_asterix {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N0>, <&kp LS(N8)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_hash_at: shift_hash_at {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N3)>, <&kp LS(N2)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_dollar_percent: shift_dollar_percent {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LS(N4)>, <&kp LS(N5)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+};
