@@ -268,6 +268,24 @@
 /* Custom Defined Behaviors */
 / {
 behaviors {
+
+    shift_1_caret: shift_1_caret {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N1>, <&kp LS(N6)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    // Needs to be an override in the case that ctr + shift + number key, we
+    // Note: this does not quite work yet, but not sure why
+    // want the number to be sent
+    // exclusive_2_lbrace: exclusive_2_lbrace {
+    //     compatible = "zmk,behavior-mod-morph";
+    //     #binding-cells = <0>;
+    //     bindings = <&kp LEFT_BRACKET>, <&kp N2>;
+    //     mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+    // };
+
     shift_2_lbrace: shift_2_lbrace {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -293,6 +311,13 @@ behaviors {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp N5>, <&kp LS(N7)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_6_exlam: shift_6_exlam {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N6>, <&kp LS(N1)>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -367,12 +392,12 @@ behaviors {
 
         layer_Base {
             bindings = <
-               &kp F1     &kp F2           &kp F3                &kp F4           &kp F5                                                                                                  &kp F6                &kp F7           &kp F8                 &kp F9         &kp F10
-             &kp RALT     &kp N1  &shift_2_lbrace  &shift_3_lcurlybrace  &shift_4_lparen  &shift_5_amper                                                                 &kp N6  &shift_7_rparen  &shift_8_rcurlybrace  &shift_9_rbrace       &shift_0_asterix  &shift_hash_at
-              &kp TAB      &kp Q            &kp W                 &kp E            &kp R           &kp T                                                                  &kp Y            &kp U                 &kp I            &kp O                  &kp P        &kp BSLH
-              &kp ESC      &kp A            &kp S                 &kp D            &kp F           &kp G                                                                  &kp H            &kp J                 &kp K            &kp L               &kp SEMI         &kp SQT
-            &kp LSHFT      &kp Z            &kp X                 &kp C            &kp V           &kp B  &kp LCTRL  &kp LALT  &kp HOME  &kp PG_UP  &kp LGUI  &kp RCTRL   &kp N            &kp M             &kp COMMA          &kp DOT               &kp FSLH       &kp RSHFT
- &magic LAYER_Magic 0  &kp GRAVE        &kp EQUAL              &kp LEFT        &kp RIGHT                   &kp BSPC   &kp DEL   &kp END  &kp PG_DN   &kp RET  &kp SPACE                 &kp DOWN                &kp UP        &kp MINUS  &shift_dollar_percent          &lower
+               &kp F1          &kp F2           &kp F3                &kp F4           &kp F5                                                                                                          &kp F6                &kp F7           &kp F8                 &kp F9         &kp F10
+             &kp RALT  &shift_1_caret  &shift_2_lbrace  &shift_3_lcurlybrace  &shift_4_lparen  &shift_5_amper                                                                 &shift_6_exlam  &shift_7_rparen  &shift_8_rcurlybrace  &shift_9_rbrace       &shift_0_asterix  &shift_hash_at
+              &kp TAB           &kp Q            &kp W                 &kp E            &kp R           &kp T                                                                          &kp Y            &kp U                 &kp I            &kp O                  &kp P        &kp BSLH
+              &kp ESC           &kp A            &kp S                 &kp D            &kp F           &kp G                                                                          &kp H            &kp J                 &kp K            &kp L               &kp SEMI         &kp SQT
+            &kp LSHFT           &kp Z            &kp X                 &kp C            &kp V           &kp B  &kp LCTRL  &kp LALT  &kp HOME  &kp PG_UP  &kp LGUI  &kp RCTRL           &kp N            &kp M             &kp COMMA          &kp DOT               &kp FSLH       &kp RSHFT
+ &magic LAYER_Magic 0       &kp GRAVE        &kp EQUAL              &kp LEFT        &kp RIGHT                   &kp BSPC   &kp DEL   &kp END  &kp PG_DN   &kp RET  &kp SPACE                         &kp DOWN                &kp UP        &kp MINUS  &shift_dollar_percent          &lower
             >;
         };
 

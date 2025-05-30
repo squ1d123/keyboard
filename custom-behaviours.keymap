@@ -1,5 +1,12 @@
 behaviors {
 
+    shift_1_caret: shift_1_caret {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N1>, <&kp LS(N6)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
     // Needs to be an override in the case that ctr + shift + number key, we
     // Note: this does not quite work yet, but not sure why
     // want the number to be sent
@@ -35,6 +42,13 @@ behaviors {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp N5>, <&kp LS(N7)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    shift_6_exlam: shift_6_exlam {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp N6>, <&kp LS(N1)>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
