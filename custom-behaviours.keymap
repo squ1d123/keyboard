@@ -1,4 +1,15 @@
 behaviors {
+
+    // Needs to be an override in the case that ctr + shift + number key, we
+    // Note: this does not quite work yet, but not sure why
+    // want the number to be sent
+    // exclusive_2_lbrace: exclusive_2_lbrace {
+    //     compatible = "zmk,behavior-mod-morph";
+    //     #binding-cells = <0>;
+    //     bindings = <&kp LEFT_BRACKET>, <&kp N2>;
+    //     mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT)>;
+    // };
+
     shift_2_lbrace: shift_2_lbrace {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
